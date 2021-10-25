@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+$dark-cyan: hsl(185, 75%, 39%);
+$very-dark-desaturated-blue: hsl(229, 23%, 23%);
+$dark-grayish-blue: hsl(227, 10%, 46%);
+$dark-gray: hsl(0, 0%, 59%);
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-color: $dark-cyan;
+  background-image: url("../images/bg-pattern-top.svg"),
+    url("../images/bg-pattern-bottom.svg");
+  background-position-x: -250px, 700px;
+  background-position-y: -500px, 500px;
+  background-repeat: no-repeat, no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 400px;
+  height: 430px;
+  background-color: #fff;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 3px 20px 100px -30px $dark-grayish-blue;
+
+  .card-header {
+    height: 35%;
+    img {
+      width: 100%;
+      border-radius: 1rem 1rem 0 0;
+    }
+  }
+
+  .profile-name {
+    text-align: center;
+    height: 40%;
+
+    img {
+      border-radius: 50%;
+      border: 7px solid #fff;
+      transform: translateY(-40%);
+    }
+
+    .name,
+    p {
+      transform: translateY(-130%);
+    }
+
+    .name {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: $very-dark-desaturated-blue;
+    }
+
+    span {
+      color: $dark-grayish-blue;
+      font-weight: 400;
+    }
+
+    p {
+      margin: 0.2rem 0;
+      color: $dark-grayish-blue;
+    }
+  }
+
+  .profile-info {
+    height: 25%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+
+    h3 {
+      font-size: 1.3rem;
+      color: $very-dark-desaturated-blue;
+    }
+
+    p {
+      font-size: 0.8rem;
+      color: $dark-grayish-blue;
+      letter-spacing: 1px;
+      margin-top: 0.3rem;
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  body {
+    background-position-x: -770px, 120px;
+    background-position-y: -510px, 420px;
+  }
+
+  .container {
+    width: 95%;
+    height: 390px;
+    margin: auto;
+
+    .profile-name {
+      img {
+        transform: translateY(-55%);
+      }
+
+      .name,
+      p {
+        transform: translateY(-200%);
+      }
+    }
+  }
+}
